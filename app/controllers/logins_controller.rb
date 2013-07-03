@@ -16,10 +16,8 @@ class LoginsController < ApplicationController
 	tesla = TeslaAPI::Connection.new(@login.name, @login.password)
 	mycar = tesla.vehicle
 	result = [mycar.color, mycar.display_name, mycar.id, mycar.vehicle_id, mycar.user_id, mycar.vin, mycar.online_state, mycar.option_codes ]
-	puts(mycar.online_state)
         format.html { redirect_to @login, notice: result }
         format.json { render action: 'show', status: :created, location: @login }
-	puts("--------__________-----------")
       else
         format.html { render action: 'new' }
         format.json { render json: @login.errors, status: :unprocessable_entity }
