@@ -14,27 +14,25 @@
 
   <tbody>
       <tr>
-       <td><%= notice[0] %></td>
        <td><%= notice[1] %></td>
        <td><%= notice[2] %></td>
        <td><%= notice[3] %></td>
        <td><%= notice[4] %></td>
        <td><%= notice[5] %></td>
        <td><%= notice[6] %></td>
-       <td><%= notice[8] %></td>
+       <td><%= notice[7] %></td>
+       <td><%= notice[9] %></td>
       </tr>
       <tr>
         <th colspan="8">Option codes</th>
       </tr>
       <tr>
-      <td colspan="8"><%= notice[7] %></td>
+      <td colspan="8"><%= notice[8] %></td>
       </tr>
   </tbody>
   <tr>
 </tr>
 
 </table>
-
-<br>
-
-<%= link_to 'New Login', new_login_path %>
+<p class="text-info"><%= notice[0] %></p>
+<%= link_to 'Start over', new_login_path, :class => 'btn btn-block btn-success' %>
