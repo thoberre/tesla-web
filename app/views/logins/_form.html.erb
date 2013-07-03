@@ -10,16 +10,18 @@
       </ul>
     </div>
   <% end %>
-
+<div style=float:left>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password %>
+
     <%= f.password_field :password %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
