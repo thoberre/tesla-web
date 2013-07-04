@@ -36,7 +36,7 @@ module TeslaAPI
         "WT21" => "wheel_silver_21",
         "WTSP" => "wheel_gray_21",
 	"WTSG" => "wheel_gray_21_plus",
-	"WTSS" => "wheel_silver_21_plus
+	"WTSS" => "wheel_silver_21_plus",
         "IBSB" => "seats_base_textile",
         "IZMB" => "seats_black_leather",
         "IZMG" => "seats_gray_leather",
