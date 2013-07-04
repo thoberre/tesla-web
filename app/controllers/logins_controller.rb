@@ -1,3 +1,5 @@
+require 'myTeslaAPI'
+
 class LoginsController < ApplicationController
   before_action :set_login, only: [:show, :edit, :update, :destroy]
 
@@ -16,7 +18,7 @@ class LoginsController < ApplicationController
         begin
   	  tesla = TeslaAPI::Connection.new(@login.name, @login.password)
 	    mycar = tesla.vehicle	
-	    result = ['TeslaAPI::Success',mycar.color, mycar.display_name, mycar.id, mycar.vehicle_id, mycar.user_id, mycar.vin, mycar.online_state, mycar.option_codes, 'false' ]
+	    result = ['TeslaAPI::Success',mycar.color, mycar.display_name, mycar.id, mycar.vehicle_id, mycar.user_id, mycar.vin, mycar.online_state, mycar.option_code_descriptions, 'false' ]
 	rescue => e
           result = [e.message]
 	end
@@ -24,7 +26,9 @@ class LoginsController < ApplicationController
 		result[9] = mycar.mobile_access?
 	rescue
 	end
-
+        #puts('-----------------')
+	#puts(tesla.vehicle.thom)
+        #puts('-----------------')
         format.html { redirect_to @login, notice: result }
         format.json { render action: 'show', status: :created, location: @login }
       else
