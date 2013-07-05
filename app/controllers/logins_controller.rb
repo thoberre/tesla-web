@@ -17,7 +17,7 @@ class LoginsController < ApplicationController
       if @login.valid?
         begin
   	  tesla = TeslaAPI::Connection.new(@login.name, @login.password)
-	    mycar = tesla.vehicle	
+	    mycar = tesla.vehicle
 	    result = ['TeslaAPI::Success',mycar.color, mycar.display_name, mycar.id, mycar.vehicle_id, mycar.user_id, mycar.vin, mycar.online_state, mycar.option_code_descriptions, 'false' ]
 	rescue => e
           result = [e.message]

@@ -7,4 +7,7 @@ class Login < ActiveRecord::Base
   
   column :name, :string
   column :password, :string
+
+  validates :name, presence:true
+  validates :password, presence:true
 end
