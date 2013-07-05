@@ -2,15 +2,22 @@
 body { padding-top: 150px; }
 @import "bootstrap-responsive";
 
+#my_header_block {
+  background-color: #C0C0C0 ;
+  border-color: #C0C0C0 ;
+  color: black;
+  @extend .alert;
+  @extend .alert-error;
+  @extend .alert-block;
+}
+
 #my_alert_block {
-  width: 90%;
   @extend .alert;
   @extend .alert-error;
   @extend .alert-block;
 }
 
 #error_explanation {
-  width: 170px;
   @extend .alert;
   @extend .alert-error;
   @extend .alert-block; 

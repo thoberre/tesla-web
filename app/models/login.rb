@@ -7,7 +7,9 @@ class Login < ActiveRecord::Base
   
   column :name, :string
   column :password, :string
+  column :terms, :boolean, default: false
 
   validates :name, presence:true
   validates :password, presence:true
+  validates :terms, acceptance: true
 end

@@ -27,7 +27,7 @@ class LoginsController < ApplicationController
 	rescue
 	end
         #puts('-----------------')
-	#puts(tesla.vehicle.thom)
+	#puts("")
         #puts('-----------------')
         format.html { redirect_to @login, notice: result }
         format.json { render action: 'show', status: :created, location: @login }
@@ -48,6 +48,6 @@ class LoginsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def login_params
-      params.require(:login).permit(:name, :password)
+      params.require(:login).permit(:name, :password, :terms)
     end
 end
