@@ -1,3 +1,5 @@
+<td><%= notice[0] rescue '' %></td>
+
 <table class="table table-bordered table-hover table-striped">
   <thead>
   <tr>
@@ -16,25 +18,24 @@
   <tbody>
   <tr>
     <td></td>
-    <td><%= notice[1] %></td>
-    <td><%= notice[2] %></td>
-    <td><%= notice[3] %></td>
-    <td><%= notice[4] %></td>
-    <td><%= notice[5] %></td>
-    <td><%= notice[6] %></td>
-    <td><%= notice[7] %></td>
-    <td><%= notice[9] %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%= notice[2] rescue '' %></td>
+    <td><%= notice[3] rescue '' %></td>
+    <td><%= notice[4] rescue '' %></td>
+    <td><%= notice[5] rescue '' %></td>
+    <td><%= notice[6] rescue '' %></td>
+    <td><%= notice[7] rescue '' %></td>
+    <td><%= notice[9] rescue '' %></td>
+
   </tr>
   <tr>
     <th colspan="9">Option codes</th>
   </tr>
   <tr>
-    <td colspan="9"><%= notice[8] %></td>
+    <td colspan="9"><%= notice[8]  rescue '' %></td>
   </tr>
   </tbody>
 
 
 </table>
-
-<p class="text-info"><%= notice[0] %></p>
-<%= link_to 'Start over', new_login_path, :class => 'btn btn-block btn-success' %>
