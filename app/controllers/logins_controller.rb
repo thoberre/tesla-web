@@ -12,6 +12,8 @@ class LoginsController < ApplicationController
   # POST /logins
   # POST /logins.json
   def create
+    debug = false
+
     @login = Login.new(login_params)
 
     if @login.valid?
@@ -29,6 +31,9 @@ class LoginsController < ApplicationController
     else
       login_valid = false
     end
+    if debug
+      login_valid = true
+    end
 
     respond_to do |format|
       if login_valid
@@ -42,6 +47,11 @@ class LoginsController < ApplicationController
           result[9] = mycar.mobile_access?
         rescue
         end
+
+        if debug
+          result = ['TeslaAPI::DebugValues','All black', 'Kitt', '321', '2342342344', '123', '5YJSA1CN5CFP01657', 'online', 'lots of options' , 'true' ]
+        end
+
         format.html { redirect_to @login, notice: result }
         format.json { render action: 'show', status: :created, location: @login }
       else
