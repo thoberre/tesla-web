@@ -1,7 +1,11 @@
-<div style=float:left>
-  <h5 class="" id="my_header_block">This is an app in alpha-stage to test if your Tesla Model S is available in the Tesla Motors REST API</h5></p>
-  <%= render 'form' %>
+<div class="row">
 
+  <div class="span4">
+    <%= render 'form' %>
+  </div>
+  <div class="span8 text-center">
+    <h5 id="my_header_block">This is an app in alpha-stage to test if your Tesla Model S is available in the Tesla Motors REST API</h5></p>
+    <span class="help-block" id="error_explanation">We encourage you to use a temporary MyTesla password if you want to try this service.</span>
+  </div>
 </div>
-
-<%= render 'disclaimer' %>
+<%= render 'disclaimer' if true == false  %>

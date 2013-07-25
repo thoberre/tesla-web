@@ -10,8 +10,8 @@
       </ul>
     </div>
   <% end %>
-<div>
-  <p>Please enter your credentials for MyTesla:</p>
+<div >
+  <h5 id="my_header_block">Your myTesla credentials:</h5>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -21,7 +21,6 @@
 
     <%= f.password_field :password %>
   </div>
-  <span class="help-block" id="error_explanation">We encourage you to use a temporary MyTesla password if you want to try this service.</span>
   <%= f.label :terms do %>
      <%= f.check_box :terms, :style => "float: left; margin:5px" %>  I understand the risks
   <% end %>  
