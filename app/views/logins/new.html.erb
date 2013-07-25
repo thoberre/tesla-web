@@ -1,22 +1,7 @@
-<div class="row">
-  <div class="span4">
-    <%= render 'form' %>
-  </div>
+<div style=float:left>
+  <h5 class="" id="my_header_block">This is an app in alpha-stage to test if your Tesla Model S is available in the Tesla Motors REST API</h5></p>
+  <%= render 'form' %>
 
-  <div class="span8">
-    <p id="my_header_block">This is an app in alpha-stage to test if your Tesla Model S is available in the Tesla Motors REST API</p>
-    <p>The information you provide and that is fetched from the Tesla REST API is not stored anywhere, and is only used for logging into the REST API. We recieve a cookie on authentication to the rest API, which is temporary stored with the rest of your session information.</p>
-    <p>But there is always a slight chance someone on the Internet tries to fetch your credentials any way they can.</p>
-    <p>In any case, please read the disclaimer below........</p>
-  <div class="muted text-center">
-  <small class="muted text-center">
-    This site is not in any way affiliated with Tesla Motors or anything else, any similarities are purely coincidencial.<br>
-    
-    Everything is provided "as-is".<br>
-    
-    We don't garantee for anything whatsoever regarding uptime, availablility, security, privacy or loss of that - nor anything else. <br>
-    By using this service you agree that you are on your own regarding all potential loss, direct or indirect - either private or business related. <br>
-    If you don't agree, please just refrain from using this service. In case you intend to hold us accountable for anything - good, evil or in between, you are not allowed to use anything contained on this website.
-  </small>
-  </div>
 </div>
+
+<%= render 'disclaimer' %>
